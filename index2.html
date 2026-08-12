@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RunPromo - Ofertas de Corrida</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f9f9f9; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    h1 { text-align: center; margin: 40px 0; color: #333; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden; }
+    .img { width: 100%; height: 180px; object-fit: cover; display: block; }
+    .info { padding: 15px; }
+    .marca { font-size: 12px; color: #999; }
+    .nome { font-weight: bold; margin: 5px 0; }
+    .preco { font-size: 16px; color: #ff6600; font-weight: bold; margin: 10px 0; }
+    .badge { background: #ff6600; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px; display: inline-block; }
+    .btn { width: 100%; padding: 10px; background: #ff6600; color: white; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+    .btn:hover { background: #e55a00; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>⚡ RunPromo - Ofertas de Corrida</h1>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <script src="data/produtos.js"></script>
+  <script>
+    const grid = document.getElementById('grid');
+    PRODUTOS.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${p.imagem}" alt="${p.nome}" class="img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22180%22%3E%3Crect fill=%22%23ddd%22 width=%22240%22 height=%22180%22/%3E%3C/svg%3E'">
+        <div class="info">
+          <div class="marca">${p.marca}</div>
+          <div class="nome">${p.nome}</div>
+          <div class="preco">R$ ${p.precoAtual.toFixed(2)}</div>
+          ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
+          <a href="${p.link}" target="_blank"><button class="btn">Ver oferta</button></a>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
