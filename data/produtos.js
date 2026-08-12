@@ -1,5 +1,5 @@
 /**
-* Catálogo de produtos do RunPromo - Com links de afiliado reais gerados.
+* Catálogo de produtos do RunPromo - Links DIRETOS dos produtos.
 *
 * COMO ATUALIZAR (faça isso antes de cada vídeo/publicação):
 * 1. Vá ao Portal de Afiliados do Mercado Livre (afiliados.mercadolivre.com.br),
@@ -32,7 +32,7 @@ const PRODUTOS = [
     parcelas: "5x de R$ 47,98 sem juros",
     cupomCompativel: "MELIACHA",
     badge: "38% OFF",
-    link: "https://lista.mercadolivre.com.br/tenis-nike-revolution-8-masculino",
+    link: "https://produto.mercadolivre.com.br/MLB-5420759822-tnis-nike-revolution-8-masculino-_JM",
     verificadoEm: "2026-08-12"
   },
   {
