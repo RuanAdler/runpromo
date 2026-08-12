@@ -32,7 +32,7 @@ const PRODUTOS = [
     parcelas: "6x de R$ 48,32 sem juros",
     cupomCompativel: "MELIACHA",
     badge: "35% OFF",
-    link: "https://www.mercadolivre.com.br/asics-gel-contend",
+    link: "https://lista.mercadolivre.com.br/tenis-asics-corrida",
     verificadoEm: "2026-08-12"
   },
   {
@@ -48,7 +48,7 @@ const PRODUTOS = [
     parcelas: "8x de R$ 43,74 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "34% OFF",
-    link: "https://www.mercadolivre.com.br/mizuno-wave-rider-26",
+    link: "https://lista.mercadolivre.com.br/tenis-mizuno-corrida",
     verificadoEm: "2026-08-12"
   },
   {
@@ -64,7 +64,7 @@ const PRODUTOS = [
     parcelas: "5x de R$ 47,98 sem juros",
     cupomCompativel: "MELIACHA",
     badge: "MAIS PROCURADO",
-    link: "https://www.mercadolivre.com.br/nike-revolution-8",
+    link: "https://lista.mercadolivre.com.br/tenis-nike-corrida",
     verificadoEm: "2026-08-12"
   },
   {
@@ -80,7 +80,7 @@ const PRODUTOS = [
     parcelas: null,
     cupomCompativel: "GANHEMAIS",
     badge: "43% OFF",
-    link: "https://www.mercadolivre.com.br/fila-racer-fastpace",
+    link: "https://lista.mercadolivre.com.br/tenis-fila-corrida",
     verificadoEm: "2026-08-12"
   },
   {
@@ -96,7 +96,7 @@ const PRODUTOS = [
     parcelas: "12x de R$ 99,92 sem juros",
     cupomCompativel: null,
     badge: "33% OFF",
-    link: "https://www.mercadolivre.com.br/garmin-forerunner-55",
+    link: "https://lista.mercadolivre.com.br/relogio-garmin-gps",
     verificadoEm: "2026-08-12"
   },
   {
@@ -112,7 +112,7 @@ const PRODUTOS = [
     parcelas: "6x de R$ 41,50 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "CUSTO-BENEFÍCIO",
-    link: "https://www.mercadolivre.com.br/redmi-watch-5",
+    link: "https://lista.mercadolivre.com.br/relogio-xiaomi-gps",
     verificadoEm: "2026-08-12"
   },
   {
@@ -128,7 +128,7 @@ const PRODUTOS = [
     parcelas: "4x de R$ 37,25 sem juros",
     cupomCompativel: null,
     badge: "50% OFF",
-    link: "https://www.mercadolivre.com.br/anker-soundcore-sport",
+    link: "https://lista.mercadolivre.com.br/fone-bluetooth-esportivo",
     verificadoEm: "2026-08-12"
   },
   {
@@ -144,7 +144,7 @@ const PRODUTOS = [
     parcelas: "8x de R$ 49,88 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "33% OFF",
-    link: "https://www.mercadolivre.com.br/jbl-endurance-peak",
+    link: "https://lista.mercadolivre.com.br/fone-jbl-esportivo",
     verificadoEm: "2026-08-12"
   },
   {
@@ -155,7 +155,7 @@ const PRODUTOS = [
     nome: "Roupas de corrida: camisetas, shorts e leggings dry-fit",
     descricaoCurta: "Dezenas de modelos com desconto - Asics, Nike, Adidas e mais marcas.",
     cupomCompativel: "MELIACHA",
-    link: "https://www.mercadolivre.com.br/camiseta-dry-fit-corrida",
+    link: "https://lista.mercadolivre.com.br/roupa-academia-feminina",
     verificadoEm: "2026-08-12"
   },
   {
@@ -166,7 +166,7 @@ const PRODUTOS = [
     nome: "Hidratação para corrida: cintos, squeezes e mochilas",
     descricaoCurta: "Cintos de hidratação, mochilas e garrafas com até 40% OFF.",
     cupomCompativel: "GANHEMAIS",
-    link: "https://www.mercadolivre.com.br/cinto-de-hidratacao-corrida",
+    link: "https://lista.mercadolivre.com.br/cinto-hidratacao",
     verificadoEm: "2026-08-12"
   }
 ];
