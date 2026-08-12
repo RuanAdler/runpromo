@@ -3,142 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RunPromo — Ofertas e cupons de corrida</title>
+  <title>RunPromo - Ofertas de Corrida</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f5f5f5; color: #333; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    
-    header { background: #fff; padding: 20px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    header .container { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 24px; font-weight: 700; color: #ff6600; text-decoration: none; }
-    
-    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 60px 0; text-align: center; }
-    .hero h1 { font-size: 48px; margin: 20px 0; }
-    .hero p { font-size: 18px; margin: 20px 0; opacity: 0.9; }
-    
-    .ofertas { padding: 60px 0; }
-    .ofertas h2 { font-size: 36px; margin-bottom: 40px; text-align: center; }
-    
-    .grade-produtos { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-    
-    .produto-card { 
-      background: white; 
-      border-radius: 8px; 
-      overflow: hidden; 
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-    .produto-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-    
-    .produto-imagem-container { 
-      width: 100%; 
-      height: 200px; 
-      overflow: hidden; 
-      background: #f0f0f0; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center;
-    }
-    .produto-imagem-container img { 
-      width: 100%; 
-      height: 100%; 
-      object-fit: cover; 
-    }
-    
-    .produto-info { padding: 15px; }
-    .produto-marca { font-size: 12px; color: #999; text-transform: uppercase; font-weight: 600; }
-    .produto-nome { font-size: 14px; font-weight: 600; margin: 8px 0; color: #333; }
-    .produto-preco { font-size: 18px; font-weight: 700; color: #ff6600; margin: 10px 0; }
-    .produto-preco-original { font-size: 12px; color: #999; text-decoration: line-through; margin-right: 8px; }
-    .produto-badge { display: inline-block; background: #ff6600; color: white; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; margin-top: 8px; }
-    .produto-cupom { font-size: 12px; color: #4CAF50; margin-top: 8px; font-weight: 600; }
-    
-    .btn { 
-      display: inline-block; 
-      background: #ff6600; 
-      color: white; 
-      padding: 10px 20px; 
-      border: none; 
-      border-radius: 4px; 
-      cursor: pointer; 
-      text-decoration: none; 
-      font-weight: 600;
-      margin-top: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 13px;
-      transition: background 0.3s;
-    }
+    body { font-family: Arial, sans-serif; background: #f9f9f9; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    h1 { text-align: center; margin: 40px 0; color: #333; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden; }
+    .img { width: 100%; height: 180px; object-fit: cover; display: block; }
+    .info { padding: 15px; }
+    .marca { font-size: 12px; color: #999; }
+    .nome { font-weight: bold; margin: 5px 0; }
+    .preco { font-size: 16px; color: #ff6600; font-weight: bold; margin: 10px 0; }
+    .badge { background: #ff6600; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px; display: inline-block; }
+    .btn { width: 100%; padding: 10px; background: #ff6600; color: white; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px; }
     .btn:hover { background: #e55a00; }
-    
-    @media (max-width: 768px) {
-      .grade-produtos { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
-      .hero h1 { font-size: 32px; }
-    }
   </style>
 </head>
 <body>
-
-<header>
   <div class="container">
-    <a href="#" class="logo">⚡ RunPromo</a>
+    <h1>⚡ RunPromo - Ofertas de Corrida</h1>
+    <div class="grid" id="grid"></div>
   </div>
-</header>
 
-<section class="hero">
-  <div class="container">
-    <h1>🏃 Ofertas de Corrida</h1>
-    <p>Tênis, roupas, fones e smartwatch com os melhores preços</p>
-  </div>
-</section>
-
-<section class="ofertas">
-  <div class="container">
-    <h2>Produtos em Destaque</h2>
-    <div class="grade-produtos" id="grade-produtos"></div>
-  </div>
-</section>
-
-<script src="data/produtos.js"></script>
-<script>
-  // Renderizar produtos com imagens
-  const grade = document.getElementById('grade-produtos');
-  
-  if (typeof PRODUTOS !== 'undefined') {
-    PRODUTOS.forEach(produto => {
+  <script src="data/produtos.js"></script>
+  <script>
+    const grid = document.getElementById('grid');
+    PRODUTOS.forEach(p => {
       const card = document.createElement('div');
-      card.className = 'produto-card';
-      
-      let imagemHTML = '';
-      if (produto.imagem) {
-        imagemHTML = `<div class="produto-imagem-container"><img src="${produto.imagem}" alt="${produto.nome}" loading="lazy"></div>`;
-      } else {
-        imagemHTML = `<div class="produto-imagem-container" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 48px;">📦</div>`;
-      }
-      
+      card.className = 'card';
       card.innerHTML = `
-        ${imagemHTML}
-        <div class="produto-info">
-          <div class="produto-marca">${produto.marca}</div>
-          <div class="produto-nome">${produto.nome}</div>
-          <div class="produto-preco">
-            ${produto.precoOriginal ? `<span class="produto-preco-original">R$ ${produto.precoOriginal.toFixed(2)}</span>` : ''}
-            R$ ${produto.precoAtual.toFixed(2)}
-          </div>
-          ${produto.badge ? `<div class="produto-badge">🔥 ${produto.badge}</div>` : ''}
-          ${produto.cupomCompativel ? `<div class="produto-cupom">✓ Cupom: ${produto.cupomCompativel}</div>` : ''}
-          <a href="${produto.link}" target="_blank" class="btn">Ver no Mercado Livre</a>
+        <img src="${p.imagem}" alt="${p.nome}" class="img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22180%22%3E%3Crect fill=%22%23ddd%22 width=%22240%22 height=%22180%22/%3E%3C/svg%3E'">
+        <div class="info">
+          <div class="marca">${p.marca}</div>
+          <div class="nome">${p.nome}</div>
+          <div class="preco">R$ ${p.precoAtual.toFixed(2)}</div>
+          ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
+          <a href="${p.link}" target="_blank"><button class="btn">Ver oferta</button></a>
         </div>
       `;
-      
-      grade.appendChild(card);
+      grid.appendChild(card);
     });
-  } else {
-    document.getElementById('grade-produtos').innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: red;">❌ Erro ao carregar produtos!</p>';
-  }
-</script>
-
+  </script>
 </body>
 </html>
