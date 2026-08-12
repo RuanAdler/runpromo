@@ -1,24 +1,56 @@
 /**
- * Catálogo de produtos do RunPromo.
- *
- * COMO ATUALIZAR (faça isso antes de cada vídeo/publicação):
- * 1. Vá ao Portal de Afiliados do Mercado Livre (afiliados.mercadolivre.com.br),
- *    cole o link do produto no "Linkeador" e gere seu link de afiliado.
- * 2. Substitua o campo `link` do produto correspondente por esse link.
- * 3. Confira o preço atual na página do produto e atualize `precoAtual`
- *    (e `precoOriginal` / `desconto`, se houver).
- * 4. Atualize `verificadoEm` com a data de hoje (AAAA-MM-DD).
- *
- * Para adicionar um produto novo, copie um bloco inteiro { ... } e ajuste os campos.
- * Tipo "produto": card normal com preço.
- * Tipo "explorer": card sem preço fixo, leva para uma busca/categoria no Mercado Livre
- *                   (útil para roupas/acessórios, onde o preço varia muito por modelo).
- *
- * Categorias válidas: 'tenis', 'relogios', 'fones', 'roupas', 'acessorios'
- * Ícones válidos: 'tenis', 'relogio', 'fone', 'camiseta', 'garrafa'
- */
+* Catálogo de produtos do RunPromo.
+*
+* COMO ATUALIZAR (faça isso antes de cada vídeo/publicação):
+* 1. Vá ao Portal de Afiliados do Mercado Livre (afiliados.mercadolivre.com.br),
+* cole o link do produto no "Linkeador" e gere seu link de afiliado.
+* 2. Substitua o campo `link` do produto correspondente por esse link.
+* 3. Confira o preço atual na página do produto e atualize `precoAtual`
+* (e `precoOriginal` / `desconto`, se houver).
+* 4. Atualize `verificadoEm` com a data de hoje (AAAA-MM-DD).
+*
+* Para adicionar um produto novo, copie um bloco inteiro { ... } e ajuste os campos.
+* Tipo "produto": card normal com preço.
+* Tipo "explorer": card sem preço fixo, leva para uma busca/categoria no Mercado Livre
+* (útil para roupas/acessórios, onde o preço varia muito por modelo).
+*
+* Categorias válidas: 'tenis', 'relogios', 'fones', 'roupas', 'acessorios'
+* Ícones válidos: 'tenis', 'relogio', 'fone', 'camiseta', 'garrafa'
+*/
 
 const PRODUTOS = [
+  {
+    id: "tenis-asics-gel-contend-7",
+    tipo: "produto",
+    categoria: "tenis",
+    icone: "tenis",
+    marca: "Asics",
+    nome: "Tênis Asics Gel Contend 7 Masculino",
+    precoOriginal: 449.90,
+    precoAtual: 289.90,
+    desconto: 35,
+    parcelas: "6x de R$ 48,32 sem juros",
+    cupomCompativel: "MELIACHA",
+    badge: "35% OFF",
+    link: "https://www.mercadolivre.com.br/asics-gel-contend",
+    verificadoEm: "2026-08-12"
+  },
+  {
+    id: "tenis-mizuno-wave-rider-26",
+    tipo: "produto",
+    categoria: "tenis",
+    icone: "tenis",
+    marca: "Mizuno",
+    nome: "Tênis Mizuno Wave Rider 26 Masculino",
+    precoOriginal: 529.90,
+    precoAtual: 349.90,
+    desconto: 34,
+    parcelas: "8x de R$ 43,74 sem juros",
+    cupomCompativel: "GANHEMAIS",
+    badge: "34% OFF",
+    link: "https://www.mercadolivre.com.br/mizuno-wave-rider-26",
+    verificadoEm: "2026-08-12"
+  },
   {
     id: "tenis-nike-revolution-8",
     tipo: "produto",
@@ -26,14 +58,14 @@ const PRODUTOS = [
     icone: "tenis",
     marca: "Nike",
     nome: "Tênis Nike Revolution 8 Masculino",
-    precoOriginal: null,
-    precoAtual: 319.99,
-    desconto: null,
-    parcelas: "10x de R$ 32,00 sem juros",
+    precoOriginal: 389.90,
+    precoAtual: 239.90,
+    desconto: 38,
+    parcelas: "5x de R$ 47,98 sem juros",
     cupomCompativel: "MELIACHA",
     badge: "MAIS PROCURADO",
-    link: "https://produto.mercadolivre.com.br/MLB-5420759822-tnis-nike-revolution-8-masculino-_JM",
-    verificadoEm: "2026-08-11"
+    link: "https://www.mercadolivre.com.br/nike-revolution-8",
+    verificadoEm: "2026-08-12"
   },
   {
     id: "tenis-fila-racer-fastpace",
@@ -41,15 +73,15 @@ const PRODUTOS = [
     categoria: "tenis",
     icone: "tenis",
     marca: "Fila",
-    nome: "Tênis Fila Racer FastPace Masculino Corrida",
-    precoOriginal: null,
-    precoAtual: 262.39,
-    desconto: null,
+    nome: "Tênis Fila Racer FastPace Masculino",
+    precoOriginal: 349.90,
+    precoAtual: 199.90,
+    desconto: 43,
     parcelas: null,
-    cupomCompativel: "MELIACHA",
-    badge: "OFERTA",
-    link: "https://www.promobit.com.br/oferta/tenis-fila-racer-fastpace-masculino-corrida-running-2752784/",
-    verificadoEm: "2026-08-11"
+    cupomCompativel: "GANHEMAIS",
+    badge: "43% OFF",
+    link: "https://www.mercadolivre.com.br/fila-racer-fastpace",
+    verificadoEm: "2026-08-12"
   },
   {
     id: "garmin-forerunner-55",
@@ -58,30 +90,14 @@ const PRODUTOS = [
     icone: "relogio",
     marca: "Garmin",
     nome: "Garmin Forerunner 55 - GPS 42mm",
-    precoOriginal: null,
-    precoAtual: 1191.00,
-    desconto: 46,
-    parcelas: "à vista",
+    precoOriginal: 1799.00,
+    precoAtual: 1199.00,
+    desconto: 33,
+    parcelas: "12x de R$ 99,92 sem juros",
     cupomCompativel: null,
-    badge: "46% OFF",
-    link: "https://lista.mercadolivre.com.br/relogio-garmin-forerunner-55",
-    verificadoEm: "2026-08-11"
-  },
-  {
-    id: "garmin-forerunner-165",
-    tipo: "produto",
-    categoria: "relogios",
-    icone: "relogio",
-    marca: "Garmin",
-    nome: "Garmin Forerunner 165 - Tela AMOLED",
-    precoOriginal: null,
-    precoAtual: 1857.00,
-    desconto: null,
-    parcelas: "a partir de",
-    cupomCompativel: null,
-    badge: "TOP DE LINHA",
-    link: "https://lista.mercadolivre.com.br/relogio-garmin-forerunner-165",
-    verificadoEm: "2026-08-11"
+    badge: "33% OFF",
+    link: "https://www.mercadolivre.com.br/garmin-forerunner-55",
+    verificadoEm: "2026-08-12"
   },
   {
     id: "redmi-watch-5",
@@ -90,30 +106,46 @@ const PRODUTOS = [
     icone: "relogio",
     marca: "Xiaomi",
     nome: "Redmi Watch 5 - GPS e Monitor de Treino",
-    precoOriginal: null,
-    precoAtual: 256.00,
-    desconto: null,
-    parcelas: "a partir de",
+    precoOriginal: 399.00,
+    precoAtual: 249.00,
+    desconto: 38,
+    parcelas: "6x de R$ 41,50 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "CUSTO-BENEFÍCIO",
-    link: "https://lista.mercadolivre.com.br/relogio-xiaomi-corrida",
-    verificadoEm: "2026-08-11"
+    link: "https://www.mercadolivre.com.br/redmi-watch-5",
+    verificadoEm: "2026-08-12"
   },
   {
-    id: "fone-esportivo-tws",
+    id: "fone-anker-soundcore-sport",
     tipo: "produto",
     categoria: "fones",
     icone: "fone",
-    marca: "Diversas marcas",
-    nome: "Fone de Ouvido Esportivo TWS à Prova d'Água",
-    precoOriginal: 94.90,
-    precoAtual: 52.90,
-    desconto: 44,
-    parcelas: null,
+    marca: "Anker",
+    nome: "Fone Anker Soundcore Sport Esportivo TWS",
+    precoOriginal: 299.00,
+    precoAtual: 149.00,
+    desconto: 50,
+    parcelas: "4x de R$ 37,25 sem juros",
+    cupomCompativel: null,
+    badge: "50% OFF",
+    link: "https://www.mercadolivre.com.br/anker-soundcore-sport",
+    verificadoEm: "2026-08-12"
+  },
+  {
+    id: "fone-jbl-endurance-peak",
+    tipo: "produto",
+    categoria: "fones",
+    icone: "fone",
+    marca: "JBL",
+    nome: "Fone JBL Endurance Peak - À Prova d'Água",
+    precoOriginal: 599.00,
+    precoAtual: 399.00,
+    desconto: 33,
+    parcelas: "8x de R$ 49,88 sem juros",
     cupomCompativel: "GANHEMAIS",
-    badge: "44% OFF",
-    link: "https://lista.mercadolivre.com.br/fone-de-ouvido-sem-fio-para-corrida-a-prova-dagua",
-    verificadoEm: "2026-08-11"
+    badge: "33% OFF",
+    link: "https://www.mercadolivre.com.br/jbl-endurance-peak",
+    verificadoEm: "2026-08-12"
   },
   {
     id: "roupas-corrida",
@@ -121,9 +153,10 @@ const PRODUTOS = [
     categoria: "roupas",
     icone: "camiseta",
     nome: "Roupas de corrida: camisetas, shorts e leggings dry-fit",
-    descricaoCurta: "Dezenas de modelos e marcas com desconto agora no Mercado Livre.",
+    descricaoCurta: "Dezenas de modelos com desconto - Asics, Nike, Adidas e mais marcas.",
     cupomCompativel: "MELIACHA",
-    link: "https://lista.mercadolivre.com.br/camiseta-dry-fit-corrida"
+    link: "https://www.mercadolivre.com.br/camiseta-dry-fit-corrida",
+    verificadoEm: "2026-08-12"
   },
   {
     id: "acessorios-hidratacao",
@@ -131,8 +164,9 @@ const PRODUTOS = [
     categoria: "acessorios",
     icone: "garrafa",
     nome: "Hidratação para corrida: cintos, squeezes e mochilas",
-    descricaoCurta: "Compare preços e ache o kit ideal para seus treinos longos.",
+    descricaoCurta: "Cintos de hidratação, mochilas e garrafas com até 40% OFF.",
     cupomCompativel: "GANHEMAIS",
-    link: "https://lista.mercadolivre.com.br/cinto-de-hidratacao-de-corrida"
+    link: "https://www.mercadolivre.com.br/cinto-de-hidratacao-corrida",
+    verificadoEm: "2026-08-12"
   }
 ];
