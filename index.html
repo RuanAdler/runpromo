@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>RunPromo — Ofertas e cupons de corrida do Mercado Livre</title>
-<meta name="description" content="Tênis, relógios GPS, fones e acessórios de corrida com os melhores preços e cupons do Mercado Livre, atualizados todo dia." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RunPromo — Ofertas e cupons de corrida do Mercado Livre</title>
+  <meta name="description" content="Tênis, relógios GPS, fones e acessórios de corrida com os melhores preços e cupons do Mercado Livre, atualizados todo dia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .produto-imagem {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .produto-visual {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(155deg, #22262e 0%, #14161b 100%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .produto-visual.com-imagem {
+      background: #f5f5f5;
+    }
+  </style>
 </head>
 <body>
 
@@ -104,17 +126,9 @@
       <div class="ofertas-cabecalho">
         <div>
           <span class="secao-tag">Ofertas em destaque</span>
-          <h2>Selecionados para quem treina de verdade</h2>
+          <h2>Tênis, roupas, fones e smartwatch</h2>
+          <p>Cada produto foi selecionado com base em desconto real, avaliação da loja e disponibilidade hoje.</p>
         </div>
-      </div>
-
-      <div class="filtros">
-        <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
-        <button class="filtro-btn" data-categoria="tenis">Tênis</button>
-        <button class="filtro-btn" data-categoria="relogios">Relógios &amp; GPS</button>
-        <button class="filtro-btn" data-categoria="fones">Fones</button>
-        <button class="filtro-btn" data-categoria="roupas">Roupas</button>
-        <button class="filtro-btn" data-categoria="acessorios">Acessórios</button>
       </div>
 
       <div class="grade-produtos" id="grade-produtos"></div>
@@ -124,25 +138,23 @@
   <!-- COMO FUNCIONA -->
   <section class="como-funciona" id="como-funciona">
     <div class="container">
-      <span class="secao-tag">Como funciona</span>
-      <h2>Simples: você economiza, a gente cuida da garimpagem</h2>
-
+      <h2>Como funciona</h2>
       <div class="passos">
-        <div class="passo">
-          <div class="passo-numero">1</div>
+        <article class="passo">
+          <span class="passo-numero">1</span>
           <h3>Escolha o produto</h3>
-          <p>Filtre por categoria e veja o preço já com desconto direto do Mercado Livre.</p>
-        </div>
-        <div class="passo">
-          <div class="passo-numero">2</div>
-          <h3>Copie o cupom do dia</h3>
-          <p>Se o produto tiver um cupom compatível, aplique no carrinho antes de pagar.</p>
-        </div>
-        <div class="passo">
-          <div class="passo-numero">3</div>
-          <h3>Compre com segurança</h3>
-          <p>Você é redirecionado direto para o Mercado Livre — compra protegida, sem custo extra.</p>
-        </div>
+          <p>Clique no tênis, camisa, fone ou relógio que combina com você.</p>
+        </article>
+        <article class="passo">
+          <span class="passo-numero">2</span>
+          <h3>Aplique o cupom</h3>
+          <p>Se houver cupom compatível, copie o código e cole no carrinho antes de confirmar a compra.</p>
+        </article>
+        <article class="passo">
+          <span class="passo-numero">3</span>
+          <h3>Economize</h3>
+          <p>Aproveite os desconto que pesquisamos para você todos os dias.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -150,13 +162,12 @@
   <!-- CTA WHATSAPP -->
   <section class="cta-whats" id="whatsapp">
     <div class="container">
-      <div>
-        <h2>Quer receber as ofertas de corrida direto no WhatsApp?</h2>
-        <p>Entre no canal e receba os melhores preços e cupons assim que forem conferidos.</p>
+      <div class="cta-content">
+        <h2>Receba ofertas no WhatsApp</h2>
+        <p>Deixa a gente te avisar quando sair uma promoção de truque pra sua corrida</p>
       </div>
-      <a href="#" class="btn btn-primario" target="_blank" rel="noopener">
-        <span data-icone="whats" style="width:18px;height:18px"></span>
-        Entrar no canal
+      <a href="https://wa.me/5587999999999?text=Oi!%20Gostaria%20de%20receber%20as%20melhores%20ofertas%20de%20corrida!" class="btn btn-primario" data-icone="whatsapp">
+        Avisa lá no WhatsApp
       </a>
     </div>
   </section>
@@ -166,64 +177,125 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grade">
-      <div class="footer-sobre">
-        <a href="#topo" class="logo">
-          <span class="logo-icone" data-icone="raio"></span>
-          Run<span>Promo</span>
-        </a>
-        <p>Curadoria diária de ofertas, cupons e descontos para quem vive de tênis
-        na estrada. Sem enrolação, só preço bom.</p>
-        <div class="footer-redes">
-          <a href="#" target="_blank" rel="noopener" aria-label="Instagram" data-icone="ig"></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="TikTok" data-icone="tiktok"></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="YouTube" data-icone="youtube"></a>
-        </div>
+      <div>
+        <strong>RunPromo</strong>
+        <p>Tênis, fones, relógios e roupas de corrida com os melhores preços do Mercado Livre, todos os dias.</p>
       </div>
-
-      <div class="footer-coluna">
-        <h4>Navegue</h4>
-        <ul>
-          <li><a href="#cupons">Cupons do dia</a></li>
-          <li><a href="#ofertas">Ofertas</a></li>
-          <li><a href="#como-funciona">Como funciona</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-coluna">
-        <h4>Categorias</h4>
-        <ul>
-          <li><a href="#ofertas">Tênis de corrida</a></li>
-          <li><a href="#ofertas">Relógios &amp; GPS</a></li>
-          <li><a href="#ofertas">Fones esportivos</a></li>
-          <li><a href="#ofertas">Roupas &amp; acessórios</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-coluna">
-        <h4>Contato</h4>
-        <ul>
-          <li><a href="#whatsapp">WhatsApp</a></li>
-          <li><a href="mailto:contato@runpromo.com.br">contato@runpromo.com.br</a></li>
-        </ul>
+      <div>
+        <strong>Links úteis</strong>
+        <a href="https://afiliados.mercadolivre.com.br">Portal de Afiliados do ML</a>
+        <a href="https://mercadolivre.com.br">Mercado Livre Brasil</a>
       </div>
     </div>
-
-    <p class="footer-disclaimer">
-      RunPromo participa do Programa de Afiliados do Mercado Livre e pode receber uma comissão
-      por compras qualificadas realizadas através dos links desta página — sem nenhum custo
-      adicional para você. Preços, descontos e cupons são de responsabilidade do Mercado Livre
-      e podem mudar sem aviso prévio; confira sempre o valor final antes de concluir a compra.
-    </p>
-
-    <div class="footer-legal">
-      <span>© <span id="ano-atual">2026</span> RunPromo. Todos os direitos reservados.</span>
-      <span>Feito para quem não perde ritmo nem em promoção.</span>
+    <div class="footer-bottom">
+      <p>&copy; 2026 RunPromo. Links oficiais do Mercado Livre.</p>
     </div>
   </div>
 </footer>
 
 <script src="data/produtos.js"></script>
 <script src="data/cupons.js"></script>
-<script src="assets/js/main.js"></script>
+<script>
+  // Renderizar Cupons
+  const gradeCupons = document.getElementById('grade-cupons');
+  CUPONS.forEach(cupom => {
+    const cupomEl = document.createElement('article');
+    cupomEl.className = 'cupom-card';
+    cupomEl.innerHTML = `
+      <div class="cupom-desconto">${cupom.desconto}</div>
+      <div class="cupom-codigo">${cupom.codigo}</div>
+      <div class="cupom-detalhe">${cupom.detalhe}</div>
+    `;
+    gradeCupons.appendChild(cupomEl);
+  });
+
+  // Renderizar Produtos COM IMAGENS
+  const gradeProdutos = document.getElementById('grade-produtos');
+  PRODUTOS.forEach(produto => {
+    const produtoEl = document.createElement('article');
+    produtoEl.className = 'produto-card';
+    
+    let htmlImagem = '';
+    if (produto.imagem) {
+      htmlImagem = `<img src="${produto.imagem}" alt="${produto.nome}" class="produto-imagem" loading="lazy" />`;
+    } else {
+      htmlImagem = `<span data-icone="${produto.icone}"></span>`;
+    }
+
+    produtoEl.innerHTML = `
+      <div class="produto-visual ${produto.imagem ? 'com-imagem' : ''}">
+        ${htmlImagem}
+      </div>
+      <div class="produto-conteudo">
+        <div class="produto-header">
+          <div>
+            <span class="produto-marca">${produto.marca}</span>
+            <h3 class="produto-nome">${produto.nome}</h3>
+          </div>
+          ${produto.badge ? `<span class="produto-badge">${produto.badge}</span>` : ''}
+        </div>
+        
+        <div class="produto-preco">
+          ${produto.precoOriginal ? `<span class="preco-original">R$ ${produto.precoOriginal.toFixed(2)}</span>` : ''}
+          <span class="preco-atual">R$ ${produto.precoAtual.toFixed(2)}</span>
+        </div>
+
+        ${produto.parcelas ? `<div class="produto-parcelas">${produto.parcelas}</div>` : ''}
+        ${produto.cupomCompativel ? `<div class="produto-cupom">Cupom: <strong>${produto.cupomCompativel}</strong></div>` : ''}
+        
+        <a href="${produto.link}" target="_blank" class="btn btn-primario btn-bloco">
+          Ir para o Mercado Livre
+        </a>
+      </div>
+    `;
+    
+    gradeProdutos.appendChild(produtoEl);
+  });
+
+  // Menu Mobile
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMobile = document.getElementById('nav-mobile');
+  menuToggle.addEventListener('click', () => {
+    navMobile.classList.toggle('ativo');
+  });
+
+  // Ícones
+  const ICONES = {
+    raio: '⚡',
+    tenis: '👟',
+    relogio: '⌚',
+    fone: '🎧',
+    camiseta: '👕',
+    garrafa: '🧴',
+    menu: '☰',
+    check: '✓',
+    aviso: '⚠️',
+    whatsapp: '💬'
+  };
+
+  document.querySelectorAll('[data-icone]').forEach(el => {
+    const icone = el.getAttribute('data-icone');
+    el.textContent = ICONES[icone] || icone;
+  });
+
+  // Contador
+  function atualizarContador() {
+    const agora = new Date();
+    const proxima = new Date();
+    proxima.setHours(24, 0, 0, 0);
+    
+    const diff = proxima - agora;
+    const horas = Math.floor(diff / (1000 * 60 * 60));
+    const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diff % (1000 * 60)) / 1000);
+    
+    document.getElementById('contador-numeros').textContent = 
+      `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+  }
+  
+  atualizarContador();
+  setInterval(atualizarContador, 1000);
+</script>
+
 </body>
 </html>
