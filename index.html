@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RunPromo — Ofertas e cupons de corrida do Mercado Livre</title>
+<meta name="description" content="Tênis, relógios GPS, fones e acessórios de corrida com os melhores preços e cupons do Mercado Livre, atualizados todo dia." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="#topo" class="logo">
+      <span class="logo-icone" data-icone="raio"></span>
+      Run<span>Promo</span>
+    </a>
+
+    <nav class="nav-desktop">
+      <a href="#cupons">Cupons do dia</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#whatsapp">WhatsApp</a>
+    </nav>
+
+    <div class="header-acoes">
+      <a href="#ofertas" class="btn btn-primario btn-pequeno somente-desktop">Ver ofertas</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" data-icone="menu"></button>
+    </div>
+
+    <nav class="nav-mobile" id="nav-mobile">
+      <a href="#cupons">Cupons do dia</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#whatsapp">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-badge"><span class="ponto"></span> Atualizado todos os dias</span>
+        <h1>Corra atrás da <em>economia</em> antes de correr a próxima prova.</h1>
+        <p class="lead">
+          Selecionamos tênis, relógios GPS, fones e acessórios de corrida com os melhores
+          preços do Mercado Livre — e reunimos os cupons que realmente valem a pena usar hoje.
+        </p>
+        <div class="hero-cta">
+          <a href="#ofertas" class="btn btn-primario">Ver ofertas de hoje</a>
+          <a href="#cupons" class="btn btn-secundario">Pegar cupom do dia</a>
+        </div>
+        <div class="hero-trust">
+          <div><span data-icone="check"></span> Links oficiais do Mercado Livre</div>
+          <div><span data-icone="check"></span> Preços conferidos manualmente</div>
+          <div><span data-icone="check"></span> Cupons revisados todo dia</div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="brilho"></div>
+        <div class="icone-central" data-icone="tenis"></div>
+        <div class="contador">
+          <div class="contador-titulo">As ofertas de hoje renovam em</div>
+          <div class="contador-numeros" id="contador-numeros">00:00:00</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUPONS -->
+  <section class="cupons" id="cupons">
+    <div class="container">
+      <div class="cupons-cabecalho">
+        <div>
+          <span class="secao-tag">Cupons do dia</span>
+          <h2>Aplique antes de fechar a compra</h2>
+          <p>Cupons do Mercado Livre são liberados por tempo e verba limitada — copie o código e confira no carrinho.</p>
+        </div>
+      </div>
+
+      <div class="cupons-grade" id="grade-cupons"></div>
+
+      <div class="cupons-aviso">
+        <span data-icone="aviso"></span>
+        <span>
+          Cupons do Mercado Livre aparecem dentro da sua conta logada e podem se esgotar a qualquer momento.
+          Confirme se o código continua ativo em
+          <strong>mercadolivre.com.br/cupons</strong> antes de aplicar na compra.
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTAS -->
+  <section class="ofertas" id="ofertas">
+    <div class="container">
+      <div class="ofertas-cabecalho">
+        <div>
+          <span class="secao-tag">Ofertas em destaque</span>
+          <h2>Selecionados para quem treina de verdade</h2>
+        </div>
+      </div>
+
+      <div class="filtros">
+        <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
+        <button class="filtro-btn" data-categoria="tenis">Tênis</button>
+        <button class="filtro-btn" data-categoria="relogios">Relógios &amp; GPS</button>
+        <button class="filtro-btn" data-categoria="fones">Fones</button>
+        <button class="filtro-btn" data-categoria="roupas">Roupas</button>
+        <button class="filtro-btn" data-categoria="acessorios">Acessórios</button>
+      </div>
+
+      <div class="grade-produtos" id="grade-produtos"></div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="como-funciona" id="como-funciona">
+    <div class="container">
+      <span class="secao-tag">Como funciona</span>
+      <h2>Simples: você economiza, a gente cuida da garimpagem</h2>
+
+      <div class="passos">
+        <div class="passo">
+          <div class="passo-numero">1</div>
+          <h3>Escolha o produto</h3>
+          <p>Filtre por categoria e veja o preço já com desconto direto do Mercado Livre.</p>
+        </div>
+        <div class="passo">
+          <div class="passo-numero">2</div>
+          <h3>Copie o cupom do dia</h3>
+          <p>Se o produto tiver um cupom compatível, aplique no carrinho antes de pagar.</p>
+        </div>
+        <div class="passo">
+          <div class="passo-numero">3</div>
+          <h3>Compre com segurança</h3>
+          <p>Você é redirecionado direto para o Mercado Livre — compra protegida, sem custo extra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WHATSAPP -->
+  <section class="cta-whats" id="whatsapp">
+    <div class="container">
+      <div>
+        <h2>Quer receber as ofertas de corrida direto no WhatsApp?</h2>
+        <p>Entre no canal e receba os melhores preços e cupons assim que forem conferidos.</p>
+      </div>
+      <a href="#" class="btn btn-primario" target="_blank" rel="noopener">
+        <span data-icone="whats" style="width:18px;height:18px"></span>
+        Entrar no canal
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grade">
+      <div class="footer-sobre">
+        <a href="#topo" class="logo">
+          <span class="logo-icone" data-icone="raio"></span>
+          Run<span>Promo</span>
+        </a>
+        <p>Curadoria diária de ofertas, cupons e descontos para quem vive de tênis
+        na estrada. Sem enrolação, só preço bom.</p>
+        <div class="footer-redes">
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram" data-icone="ig"></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="TikTok" data-icone="tiktok"></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="YouTube" data-icone="youtube"></a>
+        </div>
+      </div>
+
+      <div class="footer-coluna">
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="#cupons">Cupons do dia</a></li>
+          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-coluna">
+        <h4>Categorias</h4>
+        <ul>
+          <li><a href="#ofertas">Tênis de corrida</a></li>
+          <li><a href="#ofertas">Relógios &amp; GPS</a></li>
+          <li><a href="#ofertas">Fones esportivos</a></li>
+          <li><a href="#ofertas">Roupas &amp; acessórios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-coluna">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="#whatsapp">WhatsApp</a></li>
+          <li><a href="mailto:contato@runpromo.com.br">contato@runpromo.com.br</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-disclaimer">
+      RunPromo participa do Programa de Afiliados do Mercado Livre e pode receber uma comissão
+      por compras qualificadas realizadas através dos links desta página — sem nenhum custo
+      adicional para você. Preços, descontos e cupons são de responsabilidade do Mercado Livre
+      e podem mudar sem aviso prévio; confira sempre o valor final antes de concluir a compra.
+    </p>
+
+    <div class="footer-legal">
+      <span>© <span id="ano-atual">2026</span> RunPromo. Todos os direitos reservados.</span>
+      <span>Feito para quem não perde ritmo nem em promoção.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data/produtos.js"></script>
+<script src="data/cupons.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
