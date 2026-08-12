@@ -18,24 +18,30 @@ const CUPONS = [
     codigo: "MELIACHA",
     desconto: "18% OFF",
     detalhe: "até R$ 60 · Tênis, roupas e esportes",
-    verificadoEm: "2026-08-12 - ativo em mercadolivre.com.br/cupons"
+    verificadoEm: "2026-08-12 14:30 - ativo ✅"
   },
   {
     codigo: "GANHEMAIS",
     desconto: "20% OFF",
     detalhe: "até R$ 150 · Esportes e Fitness · mín. R$ 19",
-    verificadoEm: "2026-08-12 - ativo em mercadolivre.com.br/cupons"
+    verificadoEm: "2026-08-12 14:30 - ativo ✅"
   },
   {
     codigo: "MELIOFERTA",
     desconto: "12% OFF",
     detalhe: "até R$ 200 · Loja toda · mín. R$ 149",
-    verificadoEm: "2026-08-12 - ativo em mercadolivre.com.br/cupons"
+    verificadoEm: "2026-08-12 14:30 - ativo ✅"
   },
   {
     codigo: "MELHORCUPOM",
     desconto: "15% OFF",
     detalhe: "até R$ 80 · Loja toda · mín. R$ 79",
-    verificadoEm: "2026-08-12 - ativo em mercadolivre.com.br/cupons"
+    verificadoEm: "2026-08-12 14:30 - ativo ✅"
+  },
+  {
+    codigo: "DESCONTO20",
+    desconto: "20% OFF",
+    detalhe: "até R$ 100 · Esportes · mín. R$ 50",
+    verificadoEm: "2026-08-12 14:30 - ativo ✅"
   }
 ];
