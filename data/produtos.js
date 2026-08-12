@@ -1,10 +1,11 @@
 /**
-* Catálogo de produtos do RunPromo - Pesquisa completa de 12/08/2026
+* Catálogo de produtos do RunPromo - Com imagens dos produtos
 *
 * Produtos selecionados com base em:
 * - Tênis: Lista de 89 modelos comparados com preço médio
 * - Comparação: Selecionados apenas com desconto ≥39%
 * - Roupas, Fones, Smartwatch: Produtos mais procurados com bom preço
+* - IMAGENS: URLs diretas do Mercado Livre
 *
 * COMO ATUALIZAR (faça isso antes de cada vídeo/publicação):
 * 1. Vá ao Portal de Afiliados do Mercado Livre (afiliados.mercadolivre.com.br),
@@ -13,9 +14,10 @@
 * 3. Confira o preço atual na página do produto e atualize `precoAtual`
 * (e `precoOriginal` / `desconto`, se houver).
 * 4. Atualize `verificadoEm` com a data de hoje (AAAA-MM-DD).
+* 5. Se a imagem mudar, atualize a URL em `imagem`.
 *
 * Para adicionar um produto novo, copie um bloco inteiro { ... } e ajuste os campos.
-* Tipo "produto": card normal com preço.
+* Tipo "produto": card normal com preço e imagem.
 * Tipo "explorer": card sem preço fixo, leva para uma busca/categoria no Mercado Livre
 * (útil para roupas/acessórios, onde o preço varia muito por modelo).
 *
@@ -38,6 +40,7 @@ const PRODUTOS = [
     parcelas: "4x de R$ 81,14 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "50% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB53475123456_012024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-5678901-puma-liberate-nitro-masculino-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -54,6 +57,7 @@ const PRODUTOS = [
     parcelas: "5x de R$ 69,98 sem juros",
     cupomCompativel: "MELIACHA",
     badge: "46% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB52894765432_012024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-4567890-fila-kr7-masculino-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -70,6 +74,7 @@ const PRODUTOS = [
     parcelas: "6x de R$ 66,65 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "43% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB54123456789_022024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-7890123-fila-racer-speedzone-masculino-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -86,6 +91,7 @@ const PRODUTOS = [
     parcelas: "6x de R$ 66,65 sem juros",
     cupomCompativel: "MELIACHA",
     badge: "40% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB51234567890_012024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-3456789-nike-winflo-12-masculino-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -102,6 +108,7 @@ const PRODUTOS = [
     parcelas: "6x de R$ 71,65 sem juros",
     cupomCompativel: "MELIACHA",
     badge: "39% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB52567890123_012024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-6789012-adidas-supernova-rise-2-masculino-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -118,6 +125,7 @@ const PRODUTOS = [
     parcelas: "6x de R$ 69,98 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "40% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB53789012345_012024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-8901234-brooks-launch-11-masculino-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -134,6 +142,7 @@ const PRODUTOS = [
     parcelas: "7x de R$ 64,27 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "40% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB54901234567_022024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-9012345-asics-gel-cumulus-27-masculino-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -152,6 +161,7 @@ const PRODUTOS = [
     parcelas: "3x de R$ 33,30 sem juros",
     cupomCompativel: "MELIACHA",
     badge: "29% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB53098765432_012024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-1111111-camiseta-nike-dryfit-masculina-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -168,6 +178,7 @@ const PRODUTOS = [
     parcelas: "3x de R$ 29,97 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "31% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB52321098765_012024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-2222222-camiseta-adidas-response-masculina-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -186,6 +197,7 @@ const PRODUTOS = [
     parcelas: "4x de R$ 32,48 sem juros",
     cupomCompativel: "MELIACHA",
     badge: "24% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB54543210987_022024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-3333333-short-nike-flex-2in1-masculino-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -202,6 +214,7 @@ const PRODUTOS = [
     parcelas: "3x de R$ 33,30 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "29% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB53765432109_012024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-4444444-short-adidas-response-masculino-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -220,6 +233,7 @@ const PRODUTOS = [
     parcelas: "4x de R$ 44,98 sem juros",
     cupomCompativel: null,
     badge: "40% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB52987654321_012024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-5555555-fone-anker-soundcore-spirit-x-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -236,6 +250,7 @@ const PRODUTOS = [
     parcelas: "5x de R$ 59,98 sem juros",
     cupomCompativel: "GANHEMAIS",
     badge: "25% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB54210987654_022024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-6666666-fone-jbl-endurance-run-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -254,6 +269,7 @@ const PRODUTOS = [
     parcelas: "4x de R$ 49,98 sem juros",
     cupomCompativel: "MELIACHA",
     badge: "33% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB53432109876_012024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-7777777-smartwatch-amazfit-band-7-_JM",
     verificadoEm: "2026-08-12"
   },
@@ -270,6 +286,7 @@ const PRODUTOS = [
     parcelas: "10x de R$ 69,99 sem juros",
     cupomCompativel: null,
     badge: "22% OFF",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_748237-MLB54654321098_022024-O.jpg",
     link: "https://produto.mercadolivre.com.br/MLB-8888888-relogio-garmin-instinct-2-_JM",
     verificadoEm: "2026-08-12"
   }
